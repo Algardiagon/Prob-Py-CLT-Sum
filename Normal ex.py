@@ -58,10 +58,10 @@ if dist=='poisson':
     meano=1
     Y=stats.poisson.rvs(meano, size=elements*capacity)
     varia=meano
-    #for probability of value 'k' use: stats.poisson.pmf(k,meano)
+    #for probability of value 'k' use: poisson.pmf(k,meano)
 
 #the number of values for the noralized means is 'elements'
-#the normalized mean is (the mean of 'capacity' values)-(meano)/sqrt(varia/capacity)
+#the normalized mean is: ( (the mean of 'capacity' values)-(meano) )/ sqrt(varia/capacity)
 
 nY = [math.sqrt(capacity/varia)*(float(x)-meano) for x in Y]
 
